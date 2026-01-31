@@ -53,7 +53,7 @@
 - データ管理用スプレッドシートを作成
 - Google NotebookLM を活用
 
-**単なる資料集ではなく、  再利用・検証可能なオープンデータベースを構築**
+**単なる資料集ではなく、再利用・検証可能なオープンデータベースを構築**
 #### 実際に作成したオープンデータ
 https://docs.google.com/spreadsheets/d/1X-4FkSkNGL0JG5QdRVaUubIEsvtjC324XP0vFqnJOEM/edit?usp=sharing
 
@@ -67,7 +67,7 @@ https://docs.google.com/spreadsheets/d/1X-4FkSkNGL0JG5QdRVaUubIEsvtjC324XP0vFqnJ
 - 滑走路跡・兵舎跡などを仮想地点（FT）として配置し、  
   検証のための基準点を設定
 
-**￥知覧飛行場跡を対象とした空間的検討を行うための可視化環境を構築**
+**知覧飛行場跡を対象とした空間的検討を行うための可視化環境を構築**
 ---
 ### 3. 現地調査と照合可能な検証フレームの提示
 
