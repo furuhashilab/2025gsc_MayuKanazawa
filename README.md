@@ -1,7 +1,6 @@
 # 2025gsc_MayuKanazawa
-2025年度 卒論レポジトリ
-GISを用いた知覧特攻基地における戦争記憶の空間的可視化  
-Spatial Visualization of War Memory at the Chiran Kamikaze Base Using GIS
+## 卒論タイトル：Google Notebook LMを用いたWikipedia起点のオープンデータ整理による知覧飛行場跡の空間的再可視化
+
 
 青山学院大学 地球社会共生学部 地球社会共生学科  
 金澤真優 /　Mayu Kanazawa  
@@ -10,26 +9,183 @@ Spatial Visualization of War Memory at the Chiran Kamikaze Base Using GIS
 
 © Furuhashi Laboratory / Mayu Kanazawa, CC BY 4.0
 
-## 要旨 / Abstract
+## Abstract
 本研究は、沖縄戦における出撃拠点としての知覧町の歴史的・地政学的意義を、GISや地理空間情報を用いて可視化・分析することを目的とし、特攻隊員の出身地や慰霊碑の分布をマッピングすることで「記憶の地理学」として知覧を捉え直し、戦争の記憶を風化させない新たな視点を提示するものである。研究の動機としては、筆者自身が鹿児島に家族的な縁を持ち、大学生活の中で最も印象深かった知覧特攻平和記念館での体験から、歴史と地理を結びつけた探究を志すに至った点がある。既存研究における事実確認を踏まえながら、特攻隊に関する資料をデジタル化・可視化し、オープンデータとして後世に残す方向性を探ることで、たとえ学術的な新規性が限定的であっても、歴史資料の保存と再利用という社会的意義を持つ成果を目指す。
 
-This study aims to visualize and analyze the historical and geopolitical significance of Chiran Town as a sortie base during the Battle of Okinawa by utilizing GIS and geospatial information. By mapping the hometowns of kamikaze pilots and the distribution of memorial monuments, it seeks to reframe Chiran as part of a “geography of memory” and present a new perspective to prevent the fading of wartime memories. The motivation behind this research lies in the author’s personal family ties to Kagoshima and the profound experience at the Chiran Peace Museum for Kamikaze Pilots, which inspired an exploration that connects history and geography. Building on factual verification from existing studies, the project explores the digitization and visualization of materials related to the kamikaze units and their preservation as open data. In doing so, even if academic novelty remains limited, the study aims to achieve socially meaningful outcomes through the preservation and reuse of historical resources.
-
-## 序論 / Introduction
-第二次世界大戦末期、知覧は沖縄戦における特攻出撃拠点として重要な役割を担い、戦後も知覧特攻平和記念館を中心に記憶の継承が行われてきた。戦争の記憶が風化の危機に直面する一方で、デジタル技術や地理空間情報を用いた可視化は新たな継承手段となり得るが、従来の研究は紙ベースの史料分析が中心であり、GIS的な空間分析による「記憶の可視化」は十分に進んでいない。本研究は、①特攻隊員の出身地や慰霊碑分布の空間的特徴を明らかにすること、②知覧が出撃拠点として選ばれた歴史的・地政学的背景を考察すること、③紙ベース資料をデジタル化しオープンデータとして後世に残す方法を模索すること、の3点を目的とする。先行研究として米軍偵察写真による知覧飛行場施設配置の分析や出撃基地の特定に関する研究が存在するが、いずれも部分的な検証にとどまっており、本研究はそれらを参考にしつつ地理空間情報を活用した包括的な可視化を試みる。新規性の有無にかかわらず、戦争資料のデジタル化と公開は大きな社会的価値を持ち、古橋研究室の理念である「データそのものを風化させない」実践を通じて、戦争遺産を次世代に継承する方法論を提示する意義がある。
-
-At the end of World War II, Chiran played an important role as a kamikaze sortie base during the Battle of Okinawa, and after the war, efforts to preserve its memory have continued, especially through the Chiran Peace Museum for Kamikaze Pilots. However, the geopolitical factors and spatial characteristics behind its selection as a base have not been sufficiently examined. While wartime memory faces the risk of fading, the use of digital technology and geospatial visualization offers a new means of preservation, yet past studies have largely relied on paper-based historical analysis, and GIS-based spatial visualization of memory remains underdeveloped. This study therefore sets out with three objectives: (1) to clarify the spatial characteristics of kamikaze pilots’ hometowns and the distribution of memorial monuments, (2) to analyze the historical and geopolitical background of Chiran’s selection as a sortie base, and (3) to explore methods of digitizing paper-based materials and preserving them as open data. Previous research, such as analyses of Chiran Airfield facilities using U.S. reconnaissance photographs and debates on the identification of sortie bases, has been limited to partial examinations. Building on these, the present study seeks to achieve a more comprehensive visualization through geospatial information. Regardless of the degree of novelty, the digitization and open release of wartime records carry significant social value, and by practicing the Furuhashi Lab’s philosophy of “not letting data itself fade away,” this research aims to present a methodology for passing down war heritage to future generations.
-式)
+## Introduction
+第二次世界大戦末期、知覧は沖縄戦における特攻出撃拠点として重要な役割を担い、戦後も知覧特攻平和記念館を中心に記憶の継承が行われてきた。戦争の記憶が風化の危機に直面する一方で、デジタル技術や地理空間情報を用いた可視化は新たな継承手段となり得るが、従来の研究は紙ベースの史料分析が中心であり、GIS的な空間分析による「記憶の可視化」は十分に進んでいない。本研究は、①特攻隊員の出身地や慰霊碑分布の空間的特徴を明らかにすること、②知覧が出撃拠点として選ばれた歴史的・地政学的背景を考察すること、③オープンデータベースとして後世に残す方法を模索すること、の3点を目的とする。
 
 ## Methods:
-本研究では、地理空間情報可視化プラットフォームであるRe:Earthを用いて、第二次世界大戦末期における知覧特攻基地を中心とした歴史的背景の可視化を行った。具体的には、太平洋戦争における主要な出来事の流れを時系列で整理し、Re:Earth上にテキストボックスおよびタイムライン機能を用いて配置した。これにより、戦争の進行と知覧の位置づけを視覚的に理解できる構成を試みた。また、情報の伝達性を高めるため、グラフィックレコーディングの要素を取り入れ、文章だけでなく視覚表現を併用した。さらに、知覧飛行場を出撃元とし、特攻隊員の出身地を結ぶポリラインを作成することで、個人の出自と出撃地点との空間的関係を地理空間情報として提示した。
- ## Results:
-現段階の分析から、知覧を起点として全国各地に広がる特攻隊員の出身地分布を視覚的に把握できることが確認された。ポリラインによる表現により、特攻が一地域の出来事ではなく、日本全体を巻き込んだ現象であったことが直感的に示された。また、時系列情報と空間情報を同時に提示することで、戦争末期に向かう過程の中で知覧の役割がどのように位置づけられていたかを俯瞰的に捉えられる可能性が示唆された。一方で、出身地や個人情報に関するデータの不足や不完全さが可視化の精度に影響することも明らかとなり、現時点では探索的な結果にとどまっている。
-## Discussion:
-本研究の途中成果は、地理空間情報を用いた可視化が、戦争の記憶を「場所」と「個人」の関係として再構成する手法になり得ることを示している。従来の文章中心の記録では把握しづらかった広がりや距離感が、地図表現によって直感的に理解可能となった。一方で、Wikipedia等の既存データベースには知覧飛行場から出撃した特攻隊員の個別情報が十分に網羅されておらず、史料収集とデータ化の困難さが課題として浮かび上がった。また、Re:EarthにおけるCSVデータ更新の非自動性や、表現方法が未成熟である点も、今後の改善点として議論される。
+### 1. オープンデータの整理と可視化基盤の構築
+#### 手順
+1. 出身地・関連地点データを Google NotebookLM を活用し、CSV 形式で整理  
+2. 文字コードを UTF-8 に統一  
+3.  CSVをGoogle Earth Pro に直接インポート
+#### 意義
+単なる素材収集に留まらず、  
+**近年、研究・教育分野で注目されつつある Google NotebookLM を活用し、  
+出典・検証過程を含めた「オープンデータベース」として再利用・検証可能な形に構造化した点**に本手法の意義がある。
+これにより、データの出典・判断・再利用可能性を明示した、  
+検証可能な研究基盤を構築した。
 
-## Conclusion:
-本研究を通じて、戦争の記憶を地理空間情報として整理・提示することは、記憶継承の新たなアプローチになり得ることを確認した。現段階では、表現は「素材の配置」にとどまり、完成したストーリーテリングには至っていないが、その基礎となる構造を構築する段階にあると位置づけられる。今後は、特攻隊員の個別情報や知覧内部での動線・被害の可視化を含めたデータ拡充が必要である。また、データ量増加に対応するため、ポリライン生成やデータ処理の自動化・効率化手法を検討することが次の課題である。
+### 2. 現地調査との照合による検証
+#### 手順
+1. Google Earth Pro 上で作成した可視化結果  
+   （CSV 点データ、Image Overlay、仮想地点）をもとに現地調査を実施(予定2/4-6)
+2. 現地において、地形・距離感・視認性などを観察  
+3. デジタル上の推定結果と現地での体験を照合し、  
+   一致点およびズレを記録
+#### 意義
+デジタル上で構造化・可視化したオープンデータを現地調査と照合することで、  
+**再可視化結果の妥当性だけでなく、その限界や不確実性を空間的に検証した点**に価値がある。
+
+本研究における現地調査は、歴史的事実を断定するためのものではなく、  
+デジタル再可視化の到達点と限界を明らかにするための検証プロセスとして位置づけた。
+
+### 3. ストーリーテリングの作成
+#### 手順
+1. 上記 1・2 のプロセスで得られたデータと検証結果を統合  
+2. Google Earth Pro 上の視点移動・ズーム操作を用いて  
+   「全国分布 → 知覧 → 現地」という流れを構成  
+3. デジタル再可視化と現地体験の差異が伝わるよう、  
+   最小限のテキストと画像によるストーリーテリングを作成
+#### 意義
+本研究では、結果を一方的に提示するのではなく、  
+**データ整理・可視化・検証というプロセスそのものを追体験可能な形で提示した点**に特徴がある。
+
+これにより、オープンデータを用いた歴史的空間の再可視化において、  
+「どこまで示せるのか」「どこから不確実になるのか」を共有可能な形で表現した。
+
+## Result（成果）
+
+本研究では、知覧飛行場跡を対象として、  
+オープンデータの整理・構造化から可視化、現地調査との照合までを行い、  
+以下の成果を得た。
+
+---
+
+### 1. 検証可能なオープンデータベースの構築
+
+- Wikipedia / 国土地理院 / 米軍航空写真など、  
+  複数のオープンデータソースを整理
+- 出典・URL・ライセンス情報を明示した  
+  データ管理用スプレッドシートを作成
+- Google NotebookLM を活用し、  
+  データの判断過程・検証可能性を保持した形で構造化
+
+**成果として、単なる資料集ではなく、  
+再利用・検証可能なオープンデータベースを構築した。**
+
+---
+
+### 2. Google Earth Pro 上での再可視化環境の構築
+
+- CSV データを用い、  
+  出身地および関連地点の全国分布を可視化
+- 歴史航空写真を Image Overlay として重ね合わせ、  
+  知覧飛行場跡の位置関係を空間的に表現
+- 滑走路跡・兵舎跡などを仮想地点（FT）として配置し、  
+  検証のための基準点を設定
+
+**これにより、知覧飛行場跡を対象とした  
+空間的検討を行うための可視化環境を構築した。**
+
+---
+
+### 3. 現地調査と照合可能な検証フレームの提示
+
+- Google Earth Pro 上での再可視化結果を前提として現地調査を実施
+- 地形の起伏、距離感、視認性など、  
+  デジタル上では把握しにくい要素を記録
+- デジタル再可視化結果と現地体験の  
+  一致点およびズレを整理
+
+**その結果、デジタル再可視化の妥当性と同時に、  
+その限界や不確実性を検討可能な枠組みを示した。**
+
+---
+
+### 4. プロセスを重視したストーリーテリングの作成
+
+- データ整理から現地調査までの一連の流れを統合
+- Google Earth Pro の視点移動を用い、  
+  「全国分布 → 知覧 → 現地」という空間的ストーリーを構成
+- 結果の断定ではなく、  
+  検証過程と判断の流れが伝わる表現を採用
+
+**本研究の成果は、特定の結論を提示することではなく、  
+オープンデータを用いた再可視化のプロセスと  
+その検証可能性を共有可能な形で提示した点にある。**
+
+## Discussion（考察）
+
+本研究を通じて、オープンデータを用いた歴史的空間の再可視化には、
+一定の有効性がある一方で、明確な限界も存在することが確認された。
+
+---
+
+### 1. オープンデータ活用の有効性
+
+Wikipedia / 国土地理院 / 米軍航空写真といった
+既存のオープンデータを整理・構造化することで、
+個別には断片的であった情報を、空間的に関連づけて検討することが可能となった。
+
+特に、:contentReference[oaicite:0]{index=0}を用いることで、
+データの出典や判断過程を保持したまま整理でき、
+単なる資料収集にとどまらない「検証可能なデータベース」として扱えた点は有効であった。
+
+---
+
+### 2. デジタル再可視化の限界
+
+一方で、Google Earth Pro 上での再可視化には以下の限界が見られた。
+
+- 歴史航空写真の解像度や撮影条件に依存するため、
+  正確な位置や形状を断定することは困難である
+- 現在の地形や土地利用の変化により、
+  デジタル上では平坦に見える場所でも、
+  現地では起伏や視界の遮蔽が確認される場合がある
+- Image Overlay による手動位置合わせは、
+  比較・検討には有効であるが、精密な復元には適さない
+
+これらの点から、本研究における再可視化は、
+「復元」ではなく「空間的検討」のための手法として位置づける必要がある。
+
+---
+
+### 3. 現地調査の位置づけ
+
+現地調査は、デジタル再可視化の結果を補強・正当化するためのものではなく、
+デジタル手法の到達点と限界を確認するための検証プロセスとして機能した。
+
+デジタル上で得られた推定結果と現地での体験を照合することで、
+「どこまで示せるのか」「どこから不確実になるのか」を
+具体的に把握することが可能となった。
+
+---
+
+## Conclusion（結論）
+
+本研究では、知覧飛行場跡を対象として、
+オープンデータを用いた空間的再可視化と、その検証方法を提示した。
+
+本研究の結論は、特定の歴史的事実を断定することではなく、
+以下の点に集約される。
+
+- オープンデータを整理・構造化することで、
+  再利用・検証可能な研究基盤を構築できること
+- Google Earth Pro を用いた再可視化は、
+  歴史的空間を検討するための有効な手段となり得ること
+- 同時に、デジタル再可視化には明確な限界が存在し、
+  その限界を意識的に示すこと自体が研究成果となり得ること
+
+本研究は、オープンデータを用いた歴史的空間の再可視化において、
+「どのように見せられるか」だけでなく、
+「どこまでしか見せられないか」を共有可能な形で示した点に意義がある。
+
+今後は、他地域や他事例への応用を通じて、
+本研究で提示した方法論の汎用性や課題を検討することが期待される。
+
 
 ## 参考文献
 ![IMG_7111](https://github.com/user-attachments/assets/0ee7ab04-ed2b-40a8-a0ee-a0083c9cb1fd)
