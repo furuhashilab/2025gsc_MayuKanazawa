@@ -17,17 +17,18 @@
 
 ## Methods:
 ### 1. オープンデータの整理と可視化基盤の構築
-1. 出身地・関連地点データを Google NotebookLM を活用し、CSV 形式で整理  
+1. wikipedia上の特攻隊員出身地データを Google NotebookLM を活用し、CSV 形式で整理  
 2. 文字コードを UTF-8 に統一  
-3.  CSVをGoogle Earth Pro に直接インポート
+3. CSVをGoogle Earth Pro に直接インポート
 
 
-### 2. 現地調査との照合による検証
-1. Google Earth Pro 上で作成した可視化結果  
-   （CSV 点データ、Image Overlay、仮想地点）をもとに現地調査を実施(予定2/4-6)
-2. 現地において、地形・距離感・視認性などを観察  
-3. デジタル上の推定結果と現地での体験を照合し、一致点およびズレを記録
-
+### 2. 現地調査
+1. https://www.chiran-tokkou.jp/
+にて、知覧〜沖縄の距離感、などをメモ 
+2. 見たこと聞いたことを元に**ストーリーテリングの主人公**、**主観的なメッセージ**、**起承転結**　を考える
+3. 結果
+https://docs.google.com/document/d/1af6Pa8WOUXi5n3Q_l9LRhI7ard25CuGvh9JsEl14o0w/edit?tab=t.0
+   
 ### 3. ストーリーテリングの作成
 1. 上記 1・2 のプロセスで得られたデータと検証結果を統合  
 2. Google Earth Pro 上の視点移動・ズーム操作を用いて「全国分布 → 知覧 → 現地」という流れを構成  
